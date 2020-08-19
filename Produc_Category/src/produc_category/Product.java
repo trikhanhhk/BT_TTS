@@ -9,7 +9,7 @@ package produc_category;
  *
  * @author TK
  */
-public class Product {
+public class Product implements Comparable<Product>{
     private String name, category_tag;
 
     public Product() {
@@ -29,6 +29,11 @@ public class Product {
 
     public void setCategory_tag(String category_tag) {
         this.category_tag = category_tag;
+    }
+
+    @Override
+    public int compareTo(Product o) {
+        return name.compareTo(o.name);
     }
     
 }
