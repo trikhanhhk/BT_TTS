@@ -6,6 +6,7 @@
 package produc_category;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 /**
@@ -56,7 +57,7 @@ public class Produc_Category {
         Product product3 = new Product();
         product3.setName("PC 2");
         product3.setCategory_tag("mt");
-        productList.add(product1);
+        productList.add(product3);
         
         Product product4 = new Product();
         product4.setName("Ultrabook ez");
@@ -76,6 +77,7 @@ public class Produc_Category {
     
     static void Search(ArrayList<Product> productList, String tag){
         boolean check = false;
+        Collections.sort(productList);
         System.out.println("Output: ");
         for(int i=0; i<productList.size(); i++){
             if(tag.equals(productList.get(i).getCategory_tag())){
